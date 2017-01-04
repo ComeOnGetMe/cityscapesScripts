@@ -1,11 +1,19 @@
 # Cityscapes Dataset Labeling Tool
 
-## Tested on Ubuntu 14.04 LTS
+Tested on Ubuntu 14.04 LTS
 
 ## Usage:
+1. Get images ready. The file structure should be like that given by CityScapes:
+    - /home/image/path/leftImg8bit/[train, val, test]/[cities]/id_leftImg8bit.png
+2. Write configuration file `annotaion/cityscapesLabelTool.conf`, specify:
+    * csPath: /home/image/path
+    * imgsize: [imgHeight, imgWidth]
 
-    ```shell
-    cd annotation
-    vim cityscapesLableTool.conf
-    python cityscapesLableTool.py
+2. Initialize `id_polygon.json`:
+    ```bash
+    python initialization/initializer.py
+    ```
+3. Start Label tool:
+    ```bash
+    python annotation/cityscapesLableTool.py
     ```

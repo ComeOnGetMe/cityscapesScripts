@@ -4,7 +4,7 @@ import os, glob, sys, json
 # Configurations
 with open(sys.argv[1], 'r') as f:
     configs = json.load(f)
-cityscapesPath = configs['cityscapesPath']
+cityscapesPath = configs['csPath']
 imgsize = configs['imgsize']
 
 def main():
