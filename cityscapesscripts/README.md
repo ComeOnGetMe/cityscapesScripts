@@ -10,10 +10,13 @@ Tested on Ubuntu 14.04 LTS
     * imgsize: [imgHeight, imgWidth]
 
 2. Initialize `id_polygon.json`:
+
     ```bash
     python initialization/initializer.py
     ```
+
 3. Start Label tool:
+
     ```bash
-    python annotation/cityscapesLableTool.py
+    python annotation/cityscapesLabelTool.py
     ```
