@@ -50,6 +50,7 @@ def printHelp():
     print('Options:')
     print(' -h                 Print this help')
     print(' -t                 Use the "trainIDs" instead of the regular mapping. See "labels.py" for details.')
+    print(' -c                 Use colors instead of the regular mapping. See "labels.py" for details.')
 
 # Print an error message and quit
 def printError(message):
@@ -140,8 +141,9 @@ def json2labelImg(inJson,outImg,encoding="ids"):
 # Reads the command line arguments and calls the method 'json2labelImg'
 def main(argv):
     trainIds = False
+    color = False
     try:
-        opts, args = getopt.getopt(argv,"ht")
+        opts, args = getopt.getopt(argv,"cht")
     except getopt.GetoptError:
         printError( 'Invalid arguments' )
     for opt, arg in opts:
@@ -150,6 +152,8 @@ def main(argv):
             sys.exit(0)
         elif opt == '-t':
             trainIds = True
+        elif opt =='-c':
+            color = True
         else:
             printError( "Handling of argument '{}' not implementend".format(opt) )
 
@@ -165,6 +169,8 @@ def main(argv):
 
     if trainIds:
         json2labelImg( inJson , outImg , "trainIds" )
+    elif color:
+        json2labelImg( inJson, outImg, "color" )
     else:
         json2labelImg( inJson , outImg )
 
