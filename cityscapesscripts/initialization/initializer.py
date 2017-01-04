@@ -2,8 +2,10 @@ from __future__ import print_function
 import os, glob, sys, json
 
 # Configurations
-cityscapesPath = '/home/zhipeng_yan/Desktop/adas-segmentation-cityscape/data/cityscapes'
-imgsize = (1024,2048)
+with open(sys.argv[1], 'r') as f:
+    configs = json.load(f)
+cityscapesPath = configs['cityscapesPath']
+imgsize = configs['imgsize']
 
 def main():
     searchImg = os.path.join(cityscapesPath, 'leftImg8bit', '*', '*', '*_leftImg8bit.png')
