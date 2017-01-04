@@ -7,7 +7,7 @@ Tested on Ubuntu 14.04 LTS
 **This will create gtFine & gtCoarse folders if they do not exist. Existing files won't be affected.**
 
 1. Get images ready. The file structure should be like that given by CityScapes:
-    - /home/image/path/leftImg8bit/[train, val, test]/[cities]/id_leftImg8bit.png
+    * /home/image/path/leftImg8bit/[train, val, test]/[cities]/id_leftImg8bit.png
 2. Write configuration file `annotaion/cityscapesLabelTool.conf`, specify:
     * csPath: /home/image/path
     * imgsize: [imgHeight, imgWidth]
