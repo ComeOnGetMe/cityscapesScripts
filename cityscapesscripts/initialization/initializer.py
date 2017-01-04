@@ -2,7 +2,7 @@ from __future__ import print_function
 import os, glob, sys, json
 
 # Configurations
-with open(sys.argv[1], 'r') as f:
+with open(os.path.join( os.path.dirname( __file__ ) , '..' , 'annotation', 'cityscapesLabelTool.conf'), 'r') as f:
     configs = json.load(f)
 cityscapesPath = configs['csPath']
 imgsize = configs['imgsize']
