@@ -23,10 +23,7 @@ import getpass
 # xml parsing
 import xml.etree.ElementTree as ET
 # copy text to clipboard
-try:
-    from Tkinter import Tk
-except:
-    from tkinter import Tk
+from Tkinter import Tk
 # copy stuff
 import copy
 
@@ -67,7 +64,7 @@ class configuration:
         # The path to store correction markings
         self.correctionPath = ""
         # The transparency of the labels over the image
-        self.transp = 0.5
+        self.transp = 0.8
         # The zoom toggle
         self.zoom = False
         # The zoom factor
