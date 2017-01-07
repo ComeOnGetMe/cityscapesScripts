@@ -32,7 +32,7 @@ def main():
     initial_json = {'imgHeight':imgsize[0], 'imgWidth':imgsize[1], 'objects': []}
     print('Progress: {:>3} %'.format( progress * 100/len(images) ), end=' ')
     for img in images:
-        dataset, city, imgId = img.split('/')[-3:]
+        dataset, city, imgId = img.split(os.sep)[-3:]
         for labelType, typeDir in labelDir.items():
             datasetDir = os.path.join(typeDir, dataset)
             if not os.path.isdir(datasetDir):
